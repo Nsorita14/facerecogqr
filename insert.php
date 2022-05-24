@@ -28,6 +28,6 @@ if (!$insert) {
     echo "There are some problem while inserting data";
 }
 else{
-    echo "Data Inserted";
+    echo "Data Inserted!";
 }
 ?>
