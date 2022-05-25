@@ -103,7 +103,7 @@ include 'error.php';
                      
                                   <button>SUBMIT</button>
                            <br>
-                                <p>Are you a visitor?<a href="VisitorPage.php">Create a new account</a></p>
+                                <p>Are you a visitor?  <a href="VisitorPage.php">Create a new account</a></p>
                             <br>
                                 </td>
                             </tr>
