@@ -102,7 +102,7 @@ include 'error.php';
                                     </select>
                      
                                   <button>SUBMIT</button>
-                           
+                           <br>
                                 </td>
                             </tr>
 
