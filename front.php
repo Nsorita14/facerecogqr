@@ -42,6 +42,19 @@ button {
 	min-height: 480px;
 }
 
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+	margin: 0;
+	border-radius: 20px;
+}
+
 
     </style></head>
 
