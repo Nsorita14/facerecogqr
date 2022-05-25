@@ -61,11 +61,6 @@ input {
 	width: 100%;
 }
 
-.image {
-	margin-top: -2px;
-	margin-left: -35px;
- }
-
 .container {
 	background-color: #fff;
 	border-radius: 10px;
@@ -76,16 +71,6 @@ input {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
-}
-
-.loginerror-msg{
-   background: #ffeeee;
-   color: #ba0200;
-   font-size: 12px;
-   padding: 5px;
-   width: 100%;
-   border-radius: 5px;
-   margin: 5px auto;
 }
 
 h1{
