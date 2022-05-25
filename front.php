@@ -40,7 +40,6 @@ button {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
-    position: absolute;
 }
 
 form {
@@ -59,7 +58,7 @@ form {
 
     </style>
     </head>
-    <center>
+    
 
      <body style="background-color:#92D2E2;">
      <body background="BGpicL.jpg">
