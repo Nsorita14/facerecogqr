@@ -58,7 +58,7 @@ h1{
 
 padding: 15px;
 font-weight: 600;
-font-size: 45px;
+font-size: 30px;
 background: #5DB1B9;
 color: white
 }
