@@ -4,19 +4,13 @@
 <style>
     body {font-family: Arial, Helvetica, sans-serif;}
 
-h1 
+    h1 
 {
-text-align: center;
-font-size: 30px;
-font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-h2 {
-text-align: center;
-font-size: 20px;
-font-family: 'Montserrat', sans-serif;
-}
-    
 button {
     border-radius: 20px;
     border: 1px solid #5DB1B9;
@@ -29,8 +23,17 @@ button {
     text-transform: uppercase;
     transition: transform 80ms ease-in;
   }
+  
+  input {
+	background-color: #eee;
+	border: none;
+	border-radius: 15px;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
 
-  .container {
+.container {
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -42,18 +45,6 @@ button {
 	min-height: 480px;
 }
 
-form {
-	background-color: #FFFFFF;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 50px;
-	height: 100%;
-	text-align: center;
-	margin: 0;
-	border-radius: 20px;
-}
 
 
     </style></head>
