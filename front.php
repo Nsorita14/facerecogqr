@@ -15,11 +15,6 @@
 	margin: -20px 0 0px;
 }
 
-h1 {
-	font-weight: bold;
-	margin: 0;
-}
-
 button {
 	border-radius: 20px;
 	border: 1px solid #5DB1B9;
@@ -52,7 +47,10 @@ h1{
 	font-weight: 600;
 	font-size: 40px;
 	background: #5DB1B9;
-	color: white
+	color: white;
+    font-weight: bold;
+	margin: 0;
+    
 }
 
 
