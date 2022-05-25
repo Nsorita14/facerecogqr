@@ -72,8 +72,6 @@ include 'error.php';
                              
                             <br>
                                     <button>SUBMIT</button>
-                            <br>
-                                <p>are you a visitor?</p><a href="VisitorPage.php">Visitor</a>
                             
                                  </td>
                             </tr>
