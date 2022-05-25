@@ -4,17 +4,10 @@
 <style>
     body {font-family: Arial, Helvetica, sans-serif;}
 
-h1 
-{
-text-align: center;
-font-size: 30px;
-font-family: 'Montserrat', sans-serif;
-padding: 15px;
-font-weight: 600;
-background: #5DB1B9;
-color: white
+h1 {
+	font-weight: bold;
+	margin: 0;
 }
-
 
 h2 {
 text-align: center;
@@ -60,6 +53,16 @@ form {
 	margin: 0;
 	border-radius: 20px;
 }
+
+h1{
+
+padding: 15px;
+font-weight: 600;
+font-size: 45px;
+background: #5DB1B9;
+color: white
+}
+
 
 
     </style>

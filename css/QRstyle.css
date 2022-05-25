@@ -13,10 +13,13 @@ body {
 	height: 100vh;
 	margin: -20px 0 0px;
 }
+
 h1 {
 	font-weight: bold;
 	margin: 0;
 }
+
+
 td {
 	font-size: 18px;
 	font-weight: 100;
@@ -108,3 +111,4 @@ h1{
 	background: #5DB1B9;
 	color: white
 }
+
