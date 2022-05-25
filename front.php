@@ -75,14 +75,6 @@ input {
 	margin-left: -35px;
  }
 
-select {
-	background-color: #eee;
-	border-radius: 15px;
-	padding: 12px 15px;
-	margin: 6px 0;
-	width: 100%;
-}
-
 .container {
 	background-color: #fff;
 	border-radius: 10px;
