@@ -43,14 +43,14 @@ button {
 
 h1{
 
-	padding: 15px;
+	padding: 25px;
 	font-weight: 600;
 	font-size: 40px;
 	background: #5DB1B9;
 	color: white;
     font-weight: bold;
 	margin: 0;
-    
+
 }
 
 
