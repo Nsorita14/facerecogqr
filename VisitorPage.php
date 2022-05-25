@@ -77,20 +77,13 @@ include 'error.php';
                                     </select>
 
                                     <select name="course" value="" placeholder="Course">
-                                <option disabled="" selected="" value="">Select a Course</option>
-                                <option value="ASCT">ASCT</option>
-                                <option value="BSCPE">BSCPE</option>
-                                <option value="BSIT">BSIT</option>
-                                <option value="BSCS">BSCS</option>
-                                <option value="BSBA">BSBA</option>
-                                <option value="BSA">BSA</option>
-                                <option value="BSTM">BSTM</option>
-                                <option value="BMMA">BMMA</option>
-                                <option value="BSHM">BSHM</option>
-                                <option value="TOP">TOP</option>
-                                <option value="GAS">GAS</option>
-                                <option value="STEM">STEM</option>
-                                <option value="Faculty Staff">Faculty Staff</option>
+                                <option disabled="" selected="" value="">Purpose of visiting:</option>
+                                <option value="Enrollment">Enrollment</option>
+                                <option value="Payment">Payment</option>
+                                <option value="Guidance">Guidance</option>
+                                <option value="Meeting">Meeting</option>
+                                <option value="Appointment">Appointment</option>
+                                <option value="Clearance">Clearance</option>
                             </select>
                             
                         
