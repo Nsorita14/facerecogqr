@@ -78,7 +78,7 @@ h1{
 
 <a href="http://localhost/facerecogqr/RegPage.php"><button type="button">student</button></a>
 <a href="http://localhost/facerecogqr/VisitorPage.php"><button type="button">visitor</button></a>
-
+<img src="logo.png" width="90px" height="90px"> </img>
 
 
 </center>
