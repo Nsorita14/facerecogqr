@@ -69,6 +69,13 @@ include 'error.php';
                                  else{
                                      echo $_GET['mnumber'];
                                  }?>" placeholder="Mobile Number">
+
+                                <select name="gender" value="" placeholder="Gender">
+                               <option disabled="" selected="" value="">Gender</option>
+                               <option value="f">Female</option>
+                               <option value="m">Male</option>
+                                    </select>
+
                              
                             <br>
                                     <button>SUBMIT</button>

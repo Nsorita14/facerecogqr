@@ -69,37 +69,7 @@ include 'error.php';
                                 else{
                                         echo $_GET['lastname'];
                                         }?>" placeholder="Last name">
-                        
-                        
-                                
-                        
-                            <select name="course" value="" placeholder="Course">
-                                <option disabled="" selected="" value="">Select a Course</option>
-                                <option value="ASCT">ASCT</option>
-                                <option value="BSCPE">BSCPE</option>
-                                <option value="BSIT">BSIT</option>
-                                <option value="BSCS">BSCS</option>
-                                <option value="BSBA">BSBA</option>
-                                <option value="BSA">BSA</option>
-                                <option value="BSTM">BSTM</option>
-                                <option value="BMMA">BMMA</option>
-                                <option value="BSHM">BSHM</option>
-                                <option value="TOP">TOP</option>
-                                <option value="GAS">GAS</option>
-                                <option value="STEM">STEM</option>
-                                <option value="Faculty Staff">Faculty Staff</option>
-                            </select>
-                            
-                        
-                            
         
-                                
-                                
-                               <select name="gender" value="" placeholder="Gender">
-                               <option disabled="" selected="" value="">Gender</option>
-                               <option value="f">Female</option>
-                               <option value="m">Male</option>
-                                    </select>
                      
                                   <button>SUBMIT</button>
                            <br>
