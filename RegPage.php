@@ -13,6 +13,10 @@ include 'error.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <body class="body">
     
+    <div class=" image">
+            <img src="images/logo.png" width="95" height="95">
+         </div>
+
     <div class="container" id="container">
     <div class="form container submit-container">
 
