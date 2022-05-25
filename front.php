@@ -9,7 +9,12 @@ h1
 text-align: center;
 font-size: 30px;
 font-family: 'Montserrat', sans-serif;
+padding: 15px;
+font-weight: 600;
+background: #5DB1B9;
+color: white
 }
+
 
 h2 {
 text-align: center;
@@ -68,8 +73,7 @@ form {
     <div class="form-container submit-container">
 
 
-
-<h1>WELCOME TO STI COLLEGE CUBAO</h1>
+    <h1 class=" bg-info text-white">WELCOME TO STI COLLEGE CUBAO</h1>
 
 
 <h2>Please select</h2>
