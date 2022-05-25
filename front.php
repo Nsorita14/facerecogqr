@@ -56,7 +56,9 @@ form {
 }
 
 
-    </style></head>
+    </style>
+    </head>
+    <center>
 
      <body style="background-color:#92D2E2;">
      <body background="BGpicL.jpg">
@@ -71,7 +73,7 @@ form {
 
 <h2>Please select</h2>
 
-<center>
+
 
 
 <a href="http://localhost/facerecogqr/RegPage.php"><button type="button">student</button></a>
@@ -79,4 +81,6 @@ form {
 
 
 
-</center></body></html>
+</center>
+</body>
+</html>
