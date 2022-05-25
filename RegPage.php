@@ -7,10 +7,6 @@ include 'error.php';
 <html>
     <head>
     <center>
-    <div class=" image">
-            <img src="images/logo.png" width="95" height="95">
-         </div>
-         
         <title>Register Form </title>
         <link rel="stylesheet" type="text/css" href="css/QRstyle.css">
     </head>
@@ -20,7 +16,7 @@ include 'error.php';
     <div class="container" id="container">
     <div class="form container submit-container">
 
-    <h1 class=" bg-info text-white">QR Logine</h1>
+    <h1 class=" bg-info text-white">QR Login</h1>
 
 
     <form action="loc.php">
