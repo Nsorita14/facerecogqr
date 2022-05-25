@@ -25,6 +25,7 @@ include 'error.php';
             <?php if (isset($_GET['error'])) { ?>
                 <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
             <?php } ?>
+            <img src="logo.png" alt="">
 
             <span>Make sure all the information are correct.</span>
 
