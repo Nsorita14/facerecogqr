@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
-h1 
-{
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
+h1 {
+	font-weight: bold;
+	margin: 0;
 }
 
 button {
@@ -48,6 +46,16 @@ button {
 	max-width: 100%;
 	min-height: 480px;
 }
+
+h1{
+
+padding: 15px;
+font-weight: 600;
+font-size: 30px;
+background: #5DB1B9;
+color: white
+}
+
 
     body {font-family: 'Montserrat', sans-serif;}
     </style>
