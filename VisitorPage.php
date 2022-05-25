@@ -72,7 +72,7 @@ include 'error.php';
                              
                             <br>
                                     <button>SUBMIT</button>
-                            
+                                    <p>Are you a Registered User?  <a href="RegPage.php">Log in</a></p>
                                  </td>
                             </tr>
 
