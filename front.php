@@ -74,8 +74,8 @@ form {
 <center>
 
 
-<a href="http://localhost/webapp/new/RegPage.php"><button type="button">student</button></a>
-<a href="http://localhost/webapp/new/VisitorPage.php"><button type="button">visitor</button></a>
+<a href="http://localhost/facerecogqr/RegPage.php"><button type="button">student</button></a>
+<a href="http://localhost/facerecogqr/VisitorPage.php"><button type="button">visitor</button></a>
 
 
 
