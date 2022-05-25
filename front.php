@@ -35,15 +35,6 @@ button {
 }
 
 
-input {
-	background-color: #ccd5d5;
-	border: none;
-	border-radius: 15px;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
-}
-
 .container {
 	background-color: #fff;
 	border-radius: 10px;
