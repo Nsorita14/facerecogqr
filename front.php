@@ -67,7 +67,7 @@ h1{
      <div class="container" id="container">
     <div class="form-container submit-container">
 
-    <img src="logo.png" width="90px" height="90px"> </img>
+    <img src="logo.png" width="120px" height="120px"> </img>
     <h1 class=" bg-info text-white">WELCOME TO STI COLLEGE CUBAO</h1>
 
 
