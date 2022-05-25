@@ -76,7 +76,25 @@ include 'error.php';
                                <option value="m">Male</option>
                                     </select>
 
-                             
+                                    <select name="course" value="" placeholder="Course">
+                                <option disabled="" selected="" value="">Select a Course</option>
+                                <option value="ASCT">ASCT</option>
+                                <option value="BSCPE">BSCPE</option>
+                                <option value="BSIT">BSIT</option>
+                                <option value="BSCS">BSCS</option>
+                                <option value="BSBA">BSBA</option>
+                                <option value="BSA">BSA</option>
+                                <option value="BSTM">BSTM</option>
+                                <option value="BMMA">BMMA</option>
+                                <option value="BSHM">BSHM</option>
+                                <option value="TOP">TOP</option>
+                                <option value="GAS">GAS</option>
+                                <option value="STEM">STEM</option>
+                                <option value="Faculty Staff">Faculty Staff</option>
+                            </select>
+                            
+                        
+
                             <br>
                                     <button>SUBMIT</button>
                                     <p>Are you a Registered User?  <a href="RegPage.php">Log in</a></p>
