@@ -21,11 +21,6 @@ h1 {
 	margin: 0;
 }
 
-span {
-	margin: 10px 0 0px;
-	font-size: 14px;
-}
-
 button {
 	border-radius: 20px;
 	border: 1px solid #5DB1B9;
