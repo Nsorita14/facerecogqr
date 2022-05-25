@@ -52,14 +52,13 @@ button {
     body {font-family: 'Montserrat', sans-serif;}
     </style>
     </head>
+    <center>
     <body style="background-color:#92D2E2;">
     <body>
 
 	<body background="BGpicL.jpg">
     
     
-        
-            <center>
 
             <div class="container" id="container">
     <div class="form-container submit-container">
@@ -78,6 +77,7 @@ button {
   <button type="button">SUBMIT</button></a>
 </form> 
 
+</center>
 
 
 </body>
