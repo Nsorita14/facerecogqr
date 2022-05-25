@@ -104,6 +104,7 @@ include 'error.php';
                                   <button>SUBMIT</button>
                            <br>
                                 <p>Are you a visitor?</p><a href="VisitorPage.php">Create a new account</a>
+                            <br>
                                 </td>
                             </tr>
 
