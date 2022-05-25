@@ -7,6 +7,10 @@ include 'error.php';
 <html>
     <head>
     <center>
+    <div class=" image">
+            <img src="images/logo.png" width="95" height="95">
+         </div>
+         
         <title>Register Form </title>
         <link rel="stylesheet" type="text/css" href="css/QRstyle.css">
     </head>
