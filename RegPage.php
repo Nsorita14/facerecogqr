@@ -16,7 +16,7 @@ include 'error.php';
     <div class="container" id="container">
     <div class="form container submit-container">
 
-    <h1 class=" bg-info text-white">QR Login</h1>
+    <h1 class=" bg-info text-white">Login User</h1>
 
 
     <form action="loc.php">
