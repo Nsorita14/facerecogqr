@@ -73,7 +73,7 @@ include 'error.php';
                             <br>
                                     <button>SUBMIT</button>
                             <br>
-                                <a>href=""</a>
+                                <a href="VisitorPage.php"> </a>
 
                                  </td>
                             </tr>
