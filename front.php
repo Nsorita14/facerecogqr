@@ -23,8 +23,6 @@ h1 {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #5DB1B9;
-	background-color: #5DB1B9;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
