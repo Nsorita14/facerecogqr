@@ -16,8 +16,11 @@ include 'error.php';
     <div class="container" id="container">
     <div class="form-container submit-container">
 
+    <h1 class=" bg-info text-white">QR Login Visitor</h1>
+
+
     <form action="loc.php">
-            <h1>Registration for visitor</h1>
+
 
             <?php if (isset($_GET['error'])) { ?>
                 <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
@@ -25,18 +28,17 @@ include 'error.php';
 
             <span>Make sure all the information are correct.</span>
             
-                    <form action="insert2.php">
+                   <form action="insert2.php">
 
-                        <table>
-                            <tr>
+                      
                             <?php if (isset($_GET['error'])) { ?>
      	                    <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
                              <?php } ?>
-                            </tr>
 
-                                <tr>
-                                <td>First Name:</td>
-                                <td>
+
+
+                            
+
                                     <input type="firstname" name="firstname" value="<?php 
                                  if (empty($_GET['firstname'])) {
                                      echo "";
@@ -45,11 +47,8 @@ include 'error.php';
                                      echo $_GET['firstname'];
                                  }?>" placeholder="First Name">
                              
-                                </td>
-                            </tr>
+                             
 
-                            <tr>
-                                <td>Last Name:</td>
                                 <td>
                                     <input type="lastname" name="lastname" value="<?php 
                                  if (empty($_GET['lastname'])) {
@@ -59,12 +58,9 @@ include 'error.php';
                                      echo $_GET['lastname'];
                                  }?>" placeholder="Last Name">
                              
-                                </td>
-                            </tr>
 
                            
-                            <tr>
-                                <td>Phone:</td>
+                          
                                 <td>
                                     <input type="mnumber" name="mnumber" value="<?php 
                                  if (empty($_GET['mnumber'])) {
@@ -74,19 +70,13 @@ include 'error.php';
                                      echo $_GET['mnumber'];
                                  }?>" placeholder="Mobile Number">
                              
-                                </td>
-                            </tr>
 
-                            <tr>
-                                <td>
                                     <button>SUBMIT</button>
                             <form>  
-                            <input type="button" value="Go back!" onclick="history.back()">
+                                     <input type="button" value="Go back!" onclick="history.back()">
                             </form>
                                  </td>
                             </tr>
-                        
-                        </table>
 
                         </form>
                 </center>
