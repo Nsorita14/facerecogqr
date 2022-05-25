@@ -21,15 +21,6 @@ h1 {
 	margin: 0;
 }
 
-
-td {
-	font-size: 18px;
-	font-weight: 100;
-	line-height: 20px;
-	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
-}
-
 span {
 	margin: 10px 0 0px;
 	font-size: 14px;
