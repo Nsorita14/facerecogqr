@@ -58,7 +58,7 @@ form {
 
     </style>
     </head>
-    
+    <center>
 
      <body style="background-color:#92D2E2;">
      <body background="BGpicL.jpg">
