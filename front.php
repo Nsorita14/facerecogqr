@@ -45,7 +45,6 @@ button {
   border: 3px solid green;
   padding: 10px;
 }
-}
 
 form {
 	background-color: #FFFFFF;
