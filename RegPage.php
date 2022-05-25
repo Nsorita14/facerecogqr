@@ -102,9 +102,7 @@ include 'error.php';
                                     </select>
                      
                                   <button>SUBMIT</button>
-                            <form>
-                                    <input type="button" value="Go back!" onclick="history.back()">
-                        </form>
+                           
                                 </td>
                             </tr>
 
