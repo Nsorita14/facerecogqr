@@ -37,6 +37,36 @@ button {
 	transition: transform 80ms ease-in;
 }
 
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+	margin: 0;
+	border-radius: 20px;
+}
+
+input {
+	background-color: #ccd5d5;
+	border: none;
+	border-radius: 15px;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+
+select {
+	background-color: #eee;
+	border-radius: 15px;
+	padding: 12px 15px;
+	margin: 6px 0;
+	width: 100%;
+}
 
 .container {
 	background-color: #fff;
@@ -49,6 +79,7 @@ button {
 	max-width: 100%;
 	min-height: 480px;
 }
+
 
 h1{
 
