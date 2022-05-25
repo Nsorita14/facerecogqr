@@ -4,42 +4,49 @@
 <style>
     body {font-family: Arial, Helvetica, sans-serif;}
 
+    body {
+	background-image: url("BGpic.jpg");
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 0px;
+}
+
 h1 {
 	font-weight: bold;
 	margin: 0;
 }
 
-h2 {
-text-align: center;
-font-size: 20px;
-font-family: 'Montserrat', sans-serif;
+
+td {
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
 }
-    
+
+span {
+	margin: 10px 0 0px;
+	font-size: 14px;
+}
+
 button {
-    border-radius: 20px;
-    border: 1px solid #5DB1B9;
-    background-color: #5DB1B9;
-    color: #FFFFFF;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-  }
-
-  .container {
-	background-color: #fff;
-	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
-	position: relative;
-	overflow: hidden;
-	width: 768px;
-	max-width: 100%;
-	min-height: 480px;
+	border-radius: 20px;
+	border: 1px solid #5DB1B9;
+	background-color: #5DB1B9;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
 }
-
 
 form {
 	background-color: #FFFFFF;
@@ -54,13 +61,57 @@ form {
 	border-radius: 20px;
 }
 
+input {
+	background-color: #ccd5d5;
+	border: none;
+	border-radius: 15px;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.image {
+	margin-top: -2px;
+	margin-left: -35px;
+ }
+
+select {
+	background-color: #eee;
+	border-radius: 15px;
+	padding: 12px 15px;
+	margin: 6px 0;
+	width: 100%;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+
+.loginerror-msg{
+   background: #ffeeee;
+   color: #ba0200;
+   font-size: 12px;
+   padding: 5px;
+   width: 100%;
+   border-radius: 5px;
+   margin: 5px auto;
+}
+
 h1{
 
-padding: 15px;
-font-weight: 600;
-font-size: 30px;
-background: #5DB1B9;
-color: white
+	padding: 15px;
+	font-weight: 600;
+	font-size: 45px;
+	background: #5DB1B9;
+	color: white
 }
 
 
