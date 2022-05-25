@@ -40,10 +40,7 @@ button {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
+    position: absolute;
 }
 
 form {
