@@ -66,7 +66,7 @@ h1{
     <div class="form-container submit-container">
 
     
-    <h1 class=" bg-info text-white">WELCOME TO STI COLLEGE CUBAO</h1>
+    <h1 class=" bg-info text-white">WELCOME TO<br> STI COLLEGE CUBAO</h1>
     <img src="logo.png" width="150px" height="150px"> </img>
 
 <h2>Please select</h2>
