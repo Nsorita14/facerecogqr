@@ -10,27 +10,34 @@ include 'error.php';
     <center>
         <title>Visitor Form </title>
         <link rel="stylesheet" type="text/css" href="css/qr_login_style.css">
+        <link rel="stylesheet" type="text/css" href="css/design.css">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <body class="body">
+    <style>
+        body {
+            background-image: url(BGpicL.jpg);
+        }
+    </style>
 
-    <div class="container" id="container">
-        <div class="form-container submit-container">
+    <div class="fade-in-image">
+        <div class="container" id="container">
+            <div class="form-container submit-container">
 
-            <h1 class=" bg-info text-white">Login Visitor</h1>
-
-
-            <form action="visitor_append.php" method="post">
+                <h1 class=" bg-info text-white">Login Visitor</h1>
 
 
-                <?php if (isset($_GET['error'])) { ?>
-                    <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
-                <?php } ?>
-                <img src="img/logo.png" width="90px" height="90px"> </img>
-                <span>Make sure all the information are correct.</span>
+                <form action="visitor_append.php" method="post">
 
-                <form action="insert2.php">
+
+                    <?php if (isset($_GET['error'])) { ?>
+                        <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
+                    <?php } ?>
+                    <img src="img/logo.png" width="90px" height="90px"> </img>
+                    <span>Make sure all the information are correct.</span>
+
+
 
 
                     <?php if (isset($_GET['error'])) { ?>

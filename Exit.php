@@ -2,11 +2,14 @@
 <html>
 
 <head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Exit Form </title>
 
 </head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/design.css">
 <style>
 	body {
 		background-position: center;
@@ -17,6 +20,7 @@
 		font-family: 'Montserrat', sans-serif;
 		height: 100vh;
 		margin: -20px 0 0px;
+		background-image: url(BGpicL.jpg);
 	}
 
 	h1 {
@@ -116,25 +120,25 @@
 		<body background="img/BGpicL.jpg">
 
 
+			<div class="fade-in-image">
+				<div class="container" id="container">
+					<div class="form-container submit-container">
 
-			<div class="container" id="container">
-				<div class="form-container submit-container">
+						<h1>Exit Form</h1>
+						<br>
+						<img src="img/logo.png" width="90px" height="90px"> </img>
+						<h3> Please enter the following details:</h3>
+						<form action="/action_page.php">
+							<label for="name">Name:</label><br>
+							<input type="text" id="name" name="name" value=""><br>
 
-					<h1>Exit Form</h1>
-					<br>
-					<img src="img/logo.png" width="90px" height="90px"> </img>
-					<h3> Please enter the following details:</h3>
-					<form action="/action_page.php">
-						<label for="name">Name:</label><br>
-						<input type="text" id="name" name="name" value=""><br>
+							<label for="Pin">PIN:</label><br>
+							<input type="text" id="pin" name="pin" value=""><br>
 
-						<label for="Pin">PIN:</label><br>
-						<input type="text" id="pin" name="pin" value=""><br>
+							<tr>
 
-						<tr>
-
-							<button type="button">SUBMIT</button></a>
-					</form>
+								<button type="button">SUBMIT</button></a>
+						</form>
 
 </center>
 

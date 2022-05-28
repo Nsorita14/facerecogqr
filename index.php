@@ -1,7 +1,10 @@
 <html>
 
 <head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>QR Access</title>
+	<link rel="stylesheet" type="text/css" href="css/design.css">
 
 	<style>
 		body {
@@ -62,10 +65,15 @@
 </head>
 <center>
 
-	<body style="background-color:#92D2E2;">
+	<style>
+		body {
+			background-image: url(BGpicL.jpg);
+		}
+	</style>
 
-		<body background="img/BGpicL.jpg">
+	<body background="img/BGpicL.jpg">
 
+		<div class="fade-in-image">
 			<div class="container" id="container">
 				<div class="form-container submit-container">
 

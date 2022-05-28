@@ -1,35 +1,25 @@
 <?php
-session_start();
 include 'config.php';
-include 'error.php';
-
-$_SESSION["ru_studentid"] = $_GET["ru_studentid"];
-$password = $_GET["ru_lastname"];
-$salt = "fr";
 
 
+#Grab input values
+$qr_firstname = $_POST["qr_firstname"];
+$qr_lastname = $_POST["qr_lastname"];
+$qr_studentid = $_POST["qr_studentid"];
+$qr_course = $_POST["qr_course"];
 
-if (empty($_SESSION["ru_studentid"]) && empty($ru_email)) {
-	header("Location: RegPage.php?error=" . $emptyuserpass_err . "&ru_studentid=" . $_SESSION["ru_studentid"]);
-	exit();
-} else if (empty($_SESSION["ru_studentid"])) {
-	header("Location: RegPage.php?error=" . $emptyusername_err . "&ru_studentid=" . $_SESSION["ru_studentid"]);
-	exit();
-} else if (empty($ru_email)) {
-	header("Location: RegPage.php?error=" . $emptypassword_err . "&ru_email=" . $_SESSION["ru_email"]);
-	exit();
-}
+$id = 0;
 
 
-$sql = mysqli_query($conn, "SELECT count(*) as total from rgstrd_users WHERE ru_studentid = '" . $_SESSION["ru_studentid"] . "' and 
-	ru_email= '" . $_SESSION["ru_email"] . "'");
+#Count the rows in the rgstrd_users and increment it by one
+$count_id = mysqli_query($conn, "SELECT COUNT(*) FROM log_qr");
+$count_array = mysqli_fetch_array($count_id);
+$id = $count_array[0];
+$id = ++$id;
 
-$row = mysqli_fetch_array($sql);
 
-if ($row["total"] > 0) {
-	header("Location: Exit.php");
-	exit();
-} else {
-	header("Location: RegPage.php?error=" . $invalidcredentials_err . "&studentid" . $_SESSION["ru_studentid"]);
-	exit();
-}
+#Replace to insert a data to dropped indexes
+$register = "REPLACE INTO `log_qr` (id, qr_firstname,qr_lastname, qr_studentid, qr_course) 
+        VALUES (NULL, '$qr_firstname','$qr_firstname', '$qr_studentid', '$qr_course')";
+$rs = mysqli_query($conn, $register);
+header('location:exit.php');
