@@ -1,5 +1,6 @@
 <?php
 include 'config.php';
+session_start();
 
 
 #Grab input values
@@ -22,4 +23,11 @@ $id = ++$id;
 $register = "REPLACE INTO `qr_users` (id, qr_firstname,qr_lastname, qr_number, qr_gender, qr_purpose) 
         VALUES (NULL, '$qr_firstname','$qr_firstname', '$qr_number', '$qr_gender', '$qr_purpose')";
 $rs = mysqli_query($conn, $register);
-header('location:exit.php');
+
+
+if ($rs) {
+        $_SESSION['visit_status'] = "Successful Logged!";
+        header('location: exit.php');
+} else {
+        echo "Error has occured.";
+}

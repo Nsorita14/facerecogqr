@@ -1,3 +1,10 @@
+<?php
+include 'config.php';
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -10,6 +17,7 @@
 </head>
 
 <link rel="stylesheet" type="text/css" href="css/design.css">
+<link rel="stylesheet" type="text/css" href="css/w3.css">
 <style>
 	body {
 		background-position: center;
@@ -81,7 +89,7 @@
 		overflow: hidden;
 		width: 768px;
 		max-width: 100%;
-		height: 550px;
+		height: 650px;
 	}
 
 
@@ -119,6 +127,39 @@
 
 		<body background="img/BGpicL.jpg">
 
+			<?php
+
+			if (isset($_SESSION['visit_status'])) {
+			?>
+				<div class="w3-panel w3-cyan w3-text-white">
+					<h3> Hi, Visitor!</h3>
+					<h2> <?php echo $_SESSION['visit_status']; ?> </h2>
+				</div>
+
+			<?php
+
+				unset($_SESSION['visit_status']);
+			}
+
+			?>
+
+			<?php
+
+			if (isset($_SESSION['user_status'])) {
+			?>
+				<div class="w3-panel w3-blue w3-text-white">
+					<h3> Hi, User!</h3>
+					<h2> <?php echo $_SESSION['user_status']; ?> </h2>
+				</div>
+
+			<?php
+
+				unset($_SESSION['user_status']);
+			}
+
+			?>
+
+
 
 			<div class="fade-in-image">
 				<div class="container" id="container">
@@ -130,7 +171,12 @@
 						<h3> Please enter the following details:</h3>
 						<form action="/action_page.php">
 							<label for="name">Name:</label><br>
-							<input type="text" id="name" name="name" value=""><br>
+							<input type="name" name="qr_firstname" value="<?php
+																			if (empty($_GET['qr_firstname'])) {
+																				echo "";
+																			} else {
+																				echo $_GET['qr_firstname'];
+																			} ?>" placeholder="First Name"><br>
 
 							<label for="Pin">PIN:</label><br>
 							<input type="text" id="pin" name="pin" value=""><br>

@@ -1,5 +1,6 @@
 <?php
 include 'error.php';
+session_start();
 ?>
 
 
@@ -11,6 +12,8 @@ include 'error.php';
         <title>Visitor Form </title>
         <link rel="stylesheet" type="text/css" href="css/qr_login_style.css">
         <link rel="stylesheet" type="text/css" href="css/design.css">
+        <link rel="stylesheet" type="text/css" href="css/w3.css">
+
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
