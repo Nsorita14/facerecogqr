@@ -8,6 +8,7 @@ $qr_firstname = $_POST["qr_firstname"];
 $qr_lastname = $_POST["qr_lastname"];
 $qr_studentid = $_POST["qr_studentid"];
 $qr_course = $_POST["qr_course"];
+$qr_pin = uniqid();
 $$id = 0;
 
 
@@ -19,15 +20,18 @@ $id = ++$id;
 
 
 #Replace to insert a data to dropped indexes
-$register = "REPLACE INTO `log_qr` (id, qr_firstname,qr_lastname, qr_studentid, qr_course) 
-        VALUES (NULL, '$qr_firstname','$qr_firstname', '$qr_studentid', '$qr_course')";
+$register = "REPLACE INTO `log_qr` (id, qr_firstname,qr_lastname, qr_studentid, qr_course, qr_pin) 
+        VALUES (NULL, '$qr_firstname','$qr_firstname', '$qr_studentid', '$qr_course', '$qr_pin')";
 $rs = mysqli_query($conn, $register);
 header('location:exit.php');
 
 
 if ($rs) {
-        $_SESSION['user_status'] = "Successful Logged!";
-        header('location: exit.php');
+        $_SESSION['ru_name'] = "$qr_firstname";
+        $_SESSION['ru_pin'] = "$qr_pin";
+        $_SESSION['user_status'] = "successfully logged!";
+
+        header('location: success.php');
 } else {
         echo "Error has occured.";
 }

@@ -148,12 +148,15 @@ session_start();
 			if (isset($_SESSION['user_status'])) {
 			?>
 				<div class="w3-panel w3-blue w3-text-white">
-					<h3> Hi, User!</h3>
-					<h2> <?php echo $_SESSION['user_status']; ?> </h2>
+					<h4> Hi, <?php echo $_SESSION['ru_name']; ?> !</h4>
+					<h5> Here is your PIN: <?php echo $_SESSION['ru_pin']; ?> </h5>
+					<h4> <?php echo $_SESSION['user_status']; ?> </h4>
+
 				</div>
 
 			<?php
-
+				unset($_SESSION['ru_name']);
+				unset($_SESSION['ru_pin']);
 				unset($_SESSION['user_status']);
 			}
 
