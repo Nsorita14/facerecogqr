@@ -127,40 +127,7 @@ session_start();
 
 		<body background="img/BGpicL.jpg">
 
-			<?php
 
-			if (isset($_SESSION['visit_status'])) {
-			?>
-				<div class="w3-panel w3-cyan w3-text-white">
-					<h3> Hi, Visitor!</h3>
-					<h2> <?php echo $_SESSION['visit_status']; ?> </h2>
-				</div>
-
-			<?php
-
-				unset($_SESSION['visit_status']);
-			}
-
-			?>
-
-			<?php
-
-			if (isset($_SESSION['user_status'])) {
-			?>
-				<div class="w3-panel w3-blue w3-text-white">
-					<h4> Hi, <?php echo $_SESSION['ru_name']; ?> !</h4>
-					<h5> Here is your PIN: <?php echo $_SESSION['ru_pin']; ?> </h5>
-					<h4> <?php echo $_SESSION['user_status']; ?> </h4>
-
-				</div>
-
-			<?php
-				unset($_SESSION['ru_name']);
-				unset($_SESSION['ru_pin']);
-				unset($_SESSION['user_status']);
-			}
-
-			?>
 
 
 
