@@ -9,7 +9,7 @@ $qr_lastname = $_POST["qr_lastname"];
 $qr_number = $_POST["qr_number"];
 $qr_gender = $_POST["qr_gender"];
 $qr_purpose = $_POST["qr_purpose"];
-$qr_pin = uniqid();
+$qr_pin =  substr(md5(rand()), 0, 6);
 $id = 0;
 
 

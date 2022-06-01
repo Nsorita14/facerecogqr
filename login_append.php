@@ -8,8 +8,8 @@ $qr_firstname = $_POST["qr_firstname"];
 $qr_lastname = $_POST["qr_lastname"];
 $qr_studentid = $_POST["qr_studentid"];
 $qr_course = $_POST["qr_course"];
-$qr_pin = uniqid();
-$$id = 0;
+
+$qr_pin =  substr(md5(rand()), 0, 6);
 
 
 #Count the rows in the rgstrd_users and increment it by one
