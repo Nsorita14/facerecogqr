@@ -8,23 +8,26 @@ session_start();
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <center>
         <title>Visitor Form </title>
         <link rel="stylesheet" type="text/css" href="css/qr_login_style.css">
         <link rel="stylesheet" type="text/css" href="css/design.css">
 
 
+
+
+        <title>Admin Dashboard </title>
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body {
+        background-image: url(BGpicL.jpg);
+        font-family: 'Monserrat';
+    }
+</style>
 
 <body class="body">
-    <style>
-        body {
-            background-image: url(BGpicL.jpg);
-            font-family: 'Monserrat';
-        }
-    </style>
-
     <div class="fade-in-image">
         <div class="container" id="container">
             <div class="form-container submit-container">
