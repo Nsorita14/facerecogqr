@@ -90,7 +90,7 @@ session_start();
 		overflow: hidden;
 		width: 768px;
 		max-width: 100%;
-		height: 650px;
+		height: 550px;
 	}
 
 

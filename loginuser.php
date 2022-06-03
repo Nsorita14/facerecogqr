@@ -193,7 +193,7 @@ session_start();
 
                     <button>SUBMIT</button>
                     <br>
-                    <p>Are you a visitor? <a href="VisitorPage.php">Register here</a></p>
+                    <p>Are you a visitor? <a href="visitorpage.php">Register here</a></p>
                     <br>
                     </td>
                     </tr>
