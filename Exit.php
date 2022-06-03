@@ -16,7 +16,7 @@ session_start();
 	<title>Exit Form </title>
 
 </head>
-
+<link rel="icon" href="img/logo.png">
 <link rel="stylesheet" type="text/css" href="css/design.css">
 <link rel="stylesheet" type="text/css" href="css/w3.css">
 <style>
