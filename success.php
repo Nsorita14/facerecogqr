@@ -28,6 +28,15 @@ session_start();
         background-image: url(BGpicL.jpg);
     }
 
+    .pin {
+        border: 2px solid green;
+        border-radius: 15px;
+        font-size: 40px;
+        height: 40px;
+        width: 175px;
+        padding: 10px;
+    }
+
     h1 {
         font-weight: bold;
         margin: 0;
@@ -115,6 +124,8 @@ session_start();
         margin-bottom: 3rem;
         ;
     }
+
+    
 </style>
 
 <body class="body">
@@ -145,7 +156,8 @@ session_start();
                         <div class="w3-panel w3-cyan w3-text-white">
                             <h2> Hi, <?php echo $_SESSION['visit_name']; ?>!</h2>
                             <h3> You have <?php echo $_SESSION['visit_status']; ?> </h3>
-                            <h3> Here is your PIN: <?php echo $_SESSION['visit_pin']; ?> </h3>
+                            <h3> Here is your PIN: </h3>
+                            <div class="pin"><?php echo $_SESSION['visit_pin']; ?></div>
                             <h4> Please have a copy for your EXIT CODE. </h4>
                         </div>
 

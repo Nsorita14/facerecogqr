@@ -17,39 +17,62 @@ session_start();
 
 </head>
 <style>
+    @import "font/montserrat.css";
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        line-height: 1.15; /* 1 */
+        -webkit-text-size-adjust: 100%; /* 2 */
+    }
+
     body {
+        background-image: url("img/BGpicL.jpg");
         background-position: center;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weigth: 500;
         height: 100vh;
         margin: -20px 0 0px;
-        background-image: url(BGpicL.jpg);
-    }
-
-    h1 {
-        font-weight: bold;
-        margin: 0;
     }
 
     button {
-        border-radius: 20px;
+        border-radius: 30px;
         border: 1px solid #5DB1B9;
         background-color: #5DB1B9;
         color: #FFFFFF;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 12px 45px;
+        font-size: 60px;
+        font-weight: 800;
+        padding: 20px 75px;
         letter-spacing: 1px;
         text-transform: uppercase;
         transition: transform 80ms ease-in;
         margin-top: 2px;
+        width: 90%;
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button.ghost {
+        background-color: transparent;
+        border-color: #FFFFFF;
     }
 
     form {
         background-color: #FFFFFF;
+        border-radius: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -62,48 +85,58 @@ session_start();
 
     input {
         background-color: #ccd5d5;
+        border-radius: 25px;
         border: none;
+        font-size: 40px;
+        font-weight: 300;
         border-radius: 15px;
-        padding: 12px 15px;
+        padding: 30px 35px;
         margin: 6px;
-        width: 50%;
+        width: 90%;
     }
 
 
     select {
         background-color: #eee;
-        border-radius: 15px;
-        padding: 12px 15px;
+        border-radius: 25px;
+        font-size: 40px;
+        padding: 30px 35px;
         margin: 6px 0;
-        width: 54%;
+        width: 90%;
     }
 
     .container {
         background-color: #fff;
-        border-radius: 10px;
+        border-radius: 50px;
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-            0 10px 10px rgba(0, 0, 0, 0.22);
+                    0 10px 10px rgba(0, 0, 0, 0.22);
         position: relative;
-        overflow: hidden;
-        width: 768px;
-        max-width: 100%;
-        height: 650px;
+        overflow: visible;
+        width: 75vw;
+        height: 75vh;
     }
 
 
     h1 {
-
         padding: 15px;
-        font-weight: 600;
-        font-size: 40px;
+        font-weight: 700;
+        font-size: 70px;
         background: #5DB1B9;
         color: white;
     }
 
-
-    body {
-        font-family: 'Montserrat', sans-serif;
-
+    h5 {
+        padding: 15px;
+        font-weight: 600;
+        font-size: 40px;
+        color: black;
+        }
+    
+    span{
+        padding: 15px;
+        font-weight: 600;
+        font-size: 35px;
+        color: black;
     }
 
     label {
@@ -114,8 +147,23 @@ session_start();
     span {
 
         margin-bottom: 3rem;
-        ;
+        
     }
+
+    p{
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    .loginerror-msg{
+        background: #ffeeee;
+        color: #ba0200;
+        font-size: 24px;
+        padding: 5px;
+        width: 100%;
+        border-radius: 5px;
+        margin: 5px auto;
+        }
 </style>
 
 < <body class="body">
@@ -123,7 +171,7 @@ session_start();
         <div class="container" id="container">
             <div class="form-container submit-container">
 
-                <h1 class=" bg-info text-white">Login User</h1>
+                <h1>Login User</h1>
 
 
                 <form action="login_append.php" method="post">
@@ -132,7 +180,7 @@ session_start();
                     <?php if (isset($_GET['error'])) { ?>
                         <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
                     <?php } ?>
-                    <img src="img/logo.png" width="90px" height="90px"> </img>
+                    <img src="img/logo.png" width="250px" height="250px"> </img>
                     <span>Make sure all the information are correct.</span>
 
 
@@ -140,7 +188,7 @@ session_start();
                         <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
                     <?php } ?>
 
-                    <H5>Please enter the following details:</h5>
+                    <h5>Please enter the following details:</h5>
 
 
 
@@ -150,7 +198,6 @@ session_start();
                                                                     } else {
                                                                         echo $_GET['qr_firstname'];
                                                                     } ?>" placeholder="First Name">
-
 
 
                     <input type="name" name="qr_lastname" value="<?php

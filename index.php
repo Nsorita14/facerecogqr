@@ -14,11 +14,14 @@
 	<link rel="stylesheet" type="text/css" href="css/design.css">
 
 	<style>
+		@import "font/montserrat.css";
+
 		body {
-			font-family: Arial, Helvetica, sans-serif;
+			font-family: 'Montserrat', sans-serif;
 		}
 
 		body {
+			background-image: url(img/BGpicL.jpg);
 			background-position: center;
 			display: flex;
 			justify-content: center;
@@ -30,18 +33,17 @@
 		}
 
 		button {
-			border-radius: 20px;
+			border-radius: 40px;
 			border: 1px solid #5DB1B9;
 			background-color: #5DB1B9;
 			color: #FFFFFF;
-			font-size: 20px;
+			font-size: 75px;
 			font-weight: bold;
-			padding: 12px 35px;
+			padding: 25px 45px;
 			letter-spacing: 1px;
 			text-transform: uppercase;
 			transition: transform 80ms ease-in;
-			margin: 8px;
-
+			margin: 30px;
 		}
 
 
@@ -49,36 +51,32 @@
 			background-color: #fff;
 			border-radius: 10px;
 			box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-				0 10px 10px rgba(0, 0, 0, 0.22);
+						0 10px 10px rgba(0, 0, 0, 0.22);
 			position: relative;
-			overflow: hidden;
-			width: 768px;
-			max-width: 100%;
-			height: 110%;
+			overflow: visible;
+			width: 75vw;
+			height: 75vh;
 		}
 
 		h1 {
-
+			padding: 25px;
+			font-weight: 600;
+			font-size: 60px;
+			background: #5DB1B9;
+			color: white;
+			font-weight: bolder;}
+		h2 {
 			padding: 25px;
 			font-weight: 600;
 			font-size: 40px;
-			background: #5DB1B9;
-			color: white;
-			font-weight: bold;
-			margin: 0;
-
-		}
+			color: black;
+			font-weight: bolder;}
 	</style>
 </head>
 <center>
 
-	<style>
-		body {
-			background-image: url(BGpicL.jpg);
-		}
-	</style>
 
-	<body background="img/BGpicL.jpg">
+	<body>
 
 		<div class="fade-in-image">
 			<div class="container" id="container">
@@ -87,7 +85,7 @@
 
 					<h1 class=" bg-info text-white">WELCOME TO<br> STI COLLEGE CUBAO</h1>
 					<br>
-					<img src="img/logo.png" width="150px" height="150px"></img>
+					<img src="img/logo.png" width="350px" height="350px"></img>
 					<br>
 					<h2>Please select, if you are a: </h2>
 
