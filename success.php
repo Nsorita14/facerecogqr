@@ -13,119 +13,37 @@ session_start();
     <center>
         <title>Success Login </title>
 
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/design.css">
+        <link rel="stylesheet" type="text/css" href="css/w3.css">
+        <script src="js/jquery.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <link rel="icon" href="img/logo.png">
+        <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 <style>
-    body {
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-family: 'Montserrat', sans-serif;
-        height: 100vh;
-        margin: -20px 0 0px;
-        background-image: url(BGpicL.jpg);
+    .body {
+        background-image: url("img/BGpicL.jpg");
+
     }
 
     .pin {
         border: 2px solid green;
         border-radius: 15px;
-        font-size: 40px;
-        height: 40px;
-        width: 175px;
+        font-size: 60px;
+        height: 50px;
+        width: 200px;
         padding: 10px;
     }
 
-    h1 {
-        font-weight: bold;
-        margin: 0;
+    h2 {
+        font-size: 50px;
     }
 
-    button {
-        border-radius: 20px;
-        border: 1px solid #5DB1B9;
-        background-color: #5DB1B9;
-        color: #FFFFFF;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 12px 45px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        transition: transform 80ms ease-in;
-        margin-top: 2px;
+    h3 {
+        font-size: 50px;
+        color: green;
     }
-
-    form {
-        background-color: #FFFFFF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0 50px;
-        height: 100%;
-        text-align: center;
-        border-radius: 20px;
-    }
-
-    input {
-        background-color: #ccd5d5;
-        border: none;
-        border-radius: 15px;
-        padding: 12px 15px;
-        margin: 6px;
-        width: 50%;
-    }
-
-
-    select {
-        background-color: #eee;
-        border-radius: 15px;
-        padding: 12px 15px;
-        margin: 6px 0;
-        width: 100%;
-    }
-
-    .container {
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-            0 10px 10px rgba(0, 0, 0, 0.22);
-        position: relative;
-        overflow: hidden;
-        width: 768px;
-        max-width: 100%;
-        height: 400px;
-    }
-
-
-    h1 {
-
-        padding: 15px;
-        font-weight: 600;
-        font-size: 40px;
-        background: #5DB1B9;
-        color: white;
-    }
-
-
-    body {
-        font-family: 'Montserrat', sans-serif;
-
-    }
-
-    label {
-        font-size: 20px;
-        font-weight: 700;
-    }
-
-    span {
-
-        margin-bottom: 3rem;
-        ;
-    }
-
-    
 </style>
 
 <body class="body">
@@ -140,7 +58,7 @@ session_start();
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
                 <?php } ?>
-                <img src="img/logo.png" width="90px" height="90px"> </img>
+                <img src="img/logo.png" width="270px" height="270px"> </img>
 
 
                 <?php if (isset($_GET['error'])) { ?>
@@ -156,9 +74,9 @@ session_start();
                         <div class="w3-panel w3-cyan w3-text-white">
                             <h2> Hi, <?php echo $_SESSION['visit_name']; ?>!</h2>
                             <h3> You have <?php echo $_SESSION['visit_status']; ?> </h3>
-                            <h3> Here is your PIN: </h3>
+                            <h2> Here is your PIN: </h2>
                             <div class="pin"><?php echo $_SESSION['visit_pin']; ?></div>
-                            <h4> Please have a copy for your EXIT CODE. </h4>
+                            <h2> Please have a copy for your EXIT CODE. </h2>
                         </div>
 
 
