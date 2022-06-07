@@ -13,17 +13,17 @@ $qr_pin =  substr(md5(rand()), 0, 6);
 
 
 #Count the rows in the rgstrd_users and increment it by one
-$count_id = mysqli_query($conn, "SELECT COUNT(*) FROM log_qr");
+$count_id = mysqli_query($conn, "SELECT COUNT(*) FROM pending_qr");
 $count_array = mysqli_fetch_array($count_id);
 $id = $count_array[0];
 $id = ++$id;
 
 
 #Replace to insert a data to dropped indexes
-$register = "REPLACE INTO `log_qr` (id, qr_firstname,qr_lastname, qr_studentid, qr_course, qr_pin) 
-        VALUES (NULL, '$qr_firstname','$qr_firstname', '$qr_studentid', '$qr_course', '$qr_pin')";
+$register = "REPLACE INTO `pending_qr` (qr_firstname,qr_lastname, qr_studentid, qr_course, qr_pin) 
+        VALUES ('$qr_firstname','$qr_firstname', '$qr_studentid', '$qr_course', '$qr_pin')";
 $rs = mysqli_query($conn, $register);
-header('location:exit.php');
+
 
 
 if ($rs) {
