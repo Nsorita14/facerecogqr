@@ -3,10 +3,10 @@ include 'config.php';
 session_start();
 
 $id = intval($_SESSION['id']);
-$findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `id` = '$id'");
-$check = mysqli_fetch_assoc($findtrue)['rpi'];
+$findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$id'");
 
-if ($check) {
+
+if (mysqli_fetch_assoc($findtrue)['rpi']) {
     mysqli_fetch_assoc($findtrue);
     session_start();
     $_SESSION['pendingid'] = intval($findtrue['id']);
