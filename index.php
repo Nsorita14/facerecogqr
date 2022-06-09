@@ -11,13 +11,7 @@
 	<link rel="icon" href="img/logo.png">
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<title>QR Access</title>
-
-
-	<style>
-		body {
-			background-image: url("img/BGpicL.jpg");
-		}
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=0.75 user-scalable=no" />
 </head>
 <center>
 
@@ -31,7 +25,7 @@
 
 					<h1 class=" bg-info text-white">WELCOME TO<br> STI COLLEGE CUBAO</h1>
 					<br>
-					<img src="img/logo.png" width="350px" height="350px"></img>
+					<img src="img/logo.png" width="150px" height="150px"></img>
 					<br>
 					<h2>Please select, if you are a: </h2>
 
@@ -39,10 +33,15 @@
 
 					<a href="loginuser.php"><button type="button">Student</button></a><br>
 					<a href="visitorpage.php"><button type="button">Visitor</button></a>
-
-
+					<br>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+	</body>
 
 </center>
-</body>
+
 
 </html>

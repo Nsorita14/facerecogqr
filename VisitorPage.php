@@ -15,31 +15,19 @@ session_start();
     <script src="js/popper.min.js"></script>
     <link rel="icon" href="img/logo.png">
     <script src="js/bootstrap.bundle.min.js"></script>
-    <center>
-        <title>Visitor Form </title>
-
-
-
-
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=0.75 user-scalable=no" />
+    <title>Visitor Form</title>
 
 </head>
 
-<style>
-    body {
 
-        background-image: url("img/BGpicL.jpg");
-    }
-</style>
-
-
+<center>
 <body class="body">
     <div class="fade-in-image">
         <div class="container" id="container">
             <div class="form-container submit-container">
 
-                <h1 class=" bg-info text-white">Login Visitor</h1>
+                <h1 class=" bg-info text-white">Visitor Login</h1>
 
 
                 <form action="visitor_append.php" method="post">
@@ -48,7 +36,7 @@ session_start();
                     <?php if (isset($_GET['error'])) { ?>
                         <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
                     <?php } ?>
-                    <img src="img/logo.png" width="270px" height="270px"> </img>
+                    <img src="img/logo.png" width="150px" height="150px"> </img>
                     <span>Make sure all the information are correct.</span>
 
 

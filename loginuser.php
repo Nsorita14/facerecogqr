@@ -1,5 +1,5 @@
 <?php
-include("../config.php");
+include("config.php");
 session_start();
 
 ?>
@@ -9,40 +9,26 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/design.css">
     <link rel="icon" href="img/logo.png">
-    <center>
-        <title>User Form</title>
-
-        <link rel="stylesheet" type="text/css" href="css/design.css">
-
+    <title>User Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.75 user-scalable=no" />
 </head>
-<style>
-    body {
-        background-image: url("img/BGpicL.jpg");
-    }
-</style>
 
-< <body class="body">
+<center>
+<body class="body">
     <div class="fade-in-image">
         <div class="container" id="container">
             <div class="form-container submit-container">
-
-                <h1>Login User</h1>
-
-
+                <h1>User Login</h1>
                 <form action="login_append.php" method="post">
-
-
-                    <?php if (isset($_GET['error'])) { ?>
-                        <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
-                    <?php } ?>
-                    <img src="img/logo.png" width="250px" height="250px"> </img>
+                    <img src="img/logo.png" width="150px" height="150px"> 
                     <span>Make sure all the information are correct.</span>
 
-
                     <?php if (isset($_GET['error'])) { ?>
-                        <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
+                        <p class="regerror-msg"> <?php echo $_GET['error']; ?> </p>
                     <?php } ?>
+
 
                     <h5>Please enter the following details:</h5>
 
@@ -94,7 +80,7 @@ session_start();
                     </select>
 
 
-                    <button><a href="unlock.php">SUBMIT</button>
+                    <button>SUBMIT</button>
                     <br>
                     <p>Are you a visitor? <a href="visitorpage.php">Register here</a></p>
                     <br>
