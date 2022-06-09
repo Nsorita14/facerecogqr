@@ -27,11 +27,11 @@ $rs = mysqli_query($conn, $register);
 
 
 if ($rs) {
-        $_SESSION['visit_name'] = "$qr_firstname";
-        $_SESSION['visit_pin'] = "$qr_pin";
-        $_SESSION['visit_status'] = "successfully logged!";
-
-        header('location: success.php');
+        $_SESSION['id'] = $id;
+        header('location: pending_waitlist.php');
 } else {
-        echo "Error has occured.";
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('QR Registration failed. Please try again later.');
+        window.location.href='index.php';
+        </script>");
 }

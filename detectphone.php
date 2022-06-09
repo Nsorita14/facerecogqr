@@ -1,10 +1,7 @@
 <?php
-if(isMobile()){
+if(!isMobile()){
     // Do something for only mobile users
-    echo 'phone';
-}
-else {
-    echo 'computer';
+    echo 'NOT A PHONE';
 }
 
 function isMobile() {

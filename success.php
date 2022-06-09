@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include 'config.php';
 session_start();
 
 ?>
@@ -69,11 +69,11 @@ session_start();
 
                     <?php
 
-                    if (isset($_SESSION['visit_status'])) {
+                    if (isset($_SESSION['pendingid'])) {
                     ?>
                         <div class="w3-panel w3-cyan w3-text-white">
-                            <h2> Hi, <?php echo $_SESSION['visit_name']; ?>!</h2>
-                            <h3> You have <?php echo $_SESSION['visit_status']; ?> </h3>
+                            <h2> Hi, <?php echo $_SESSION['firstname']; ?>!</h2>
+                            <h3> You have been accepted. Please position yourself in front of the turnstile for face capturing</h3>
                             <h2> Here is your PIN: </h2>
                             <div class="pin"><?php echo $_SESSION['visit_pin']; ?></div>
                             <h2> Please have a copy for your EXIT CODE. </h2>
