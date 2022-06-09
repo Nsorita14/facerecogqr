@@ -1,6 +1,7 @@
 <?php
 include 'config.php';
 session_start();
+error_reporting(0);
 
 $id = intval($_SESSION['id']);
 $findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$id'");
@@ -16,8 +17,7 @@ if (mysqli_fetch_assoc($findtrue)['rpi']) {
     $_SESSION['course'] = $findtrue['qr_course'];
     header("Location: success.php");
     exit();
-}
-else {
+} else {
     $page = $_SERVER['PHP_SELF'];
     $sec = "1";
     header("Refresh: $sec; url=$page");
@@ -27,23 +27,46 @@ else {
 
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<style type="text/css">
-iframe{
-    width: 100vw;
-    height: 100vh;
-    margin-top: 25vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-</style>
+    <style type="text/css">
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            margin-top: 25vh;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .load_page {
+
+
+
+            margin-top: 41rem;
+        }
+
+        h1 {
+
+            font-family: 'Monserat';
+            font-size: 50px;
+        }
+    </style>
 
 
 </head>
+
 <body>
-<center>
-<h1> Please wait for the approval. </h1>
-</center>
+
+    <div class="load_page">
+        <center>
+
+            <h1> Kindly wait for the approval. </h1>
+            <img src="img/loading.gif" width="" height="">
+        </center>
+
+    </div>
 </body>
+
 </html>
