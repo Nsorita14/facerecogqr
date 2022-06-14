@@ -13,7 +13,6 @@ while (!mysqli_fetch_assoc($findtrue)['rpi']) {
     $page = $_SERVER['PHP_SELF'];
     $sec = "1";
     header("Refresh: $sec; url=$page");
-    echo $stat;
 }
 session_start();
 $_SESSION['pendingid'] = intval($findtrue['id']);
