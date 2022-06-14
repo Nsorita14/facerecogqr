@@ -8,7 +8,7 @@ $id = intval($_SESSION['id']);
 $findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$id'");
 
 
-if (mysqli_fetch_assoc($findtrue)['rpi']) {
+if (mysqli_fetch_assoc($findtrue)['rpi'] == 'true') {
     mysqli_fetch_assoc($findtrue);
     session_start();
     $_SESSION['pendingid'] = intval($findtrue['id']);
