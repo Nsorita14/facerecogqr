@@ -9,7 +9,7 @@ $findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` 
 
 
 if (mysqli_fetch_assoc($findtrue)['rpi'] == 'true') {
-    mysqli_fetch_assoc($findtrue);
+    echo mysqli_fetch_assoc($findtrue);
     session_start();
     $_SESSION['pendingid'] = intval($findtrue['id']);
     $_SESSION['firstname'] = $findtrue['qr_firstname'];
@@ -30,7 +30,6 @@ if (mysqli_fetch_assoc($findtrue)['rpi'] == 'true') {
 <html>
 
 <head>
-
     <style type="text/css">
         iframe {
             width: 100vw;
@@ -38,36 +37,27 @@ if (mysqli_fetch_assoc($findtrue)['rpi'] == 'true') {
             margin-top: 25vh;
             margin-left: auto;
             margin-right: auto;
-
         }
-
         .load_page {
-
-
-
             margin-top: 41rem;
         }
 
         h1 {
-
             font-family: 'Monserat';
             font-size: 50px;
         }
     </style>
-
-
 </head>
 
 <body>
 
     <div class="load_page">
         <center>
-
             <h1> Kindly wait for the approval. </h1>
             <img src="img/loading.gif" width="" height="">
         </center>
-
     </div>
+
 </body>
 
 </html>
