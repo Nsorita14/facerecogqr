@@ -7,7 +7,8 @@ error_reporting(0);
 $id = intval($_SESSION['id']);
 $findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$id'");
 
-
+$stat = mysqli_fetch_assoc($findtrue)['rpi'];
+echo $stat;
 while (mysqli_fetch_assoc($findtrue)['rpi'] == 'false') {
     $page = $_SERVER['PHP_SELF'];
     $sec = "1";
@@ -51,7 +52,8 @@ exit();
 
     <div class="load_page">
         <center>
-            <h1> Kindly wait for the approval. </h1>
+            <h1> Kindly wait for the approval.</h1>
+            
             <img src="img/loading.gif" width="" height="">
         </center>
     </div>
