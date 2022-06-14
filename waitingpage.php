@@ -13,6 +13,7 @@ while (mysqli_fetch_assoc($findtrue)['rpi'] = false) {
     $page = $_SERVER['PHP_SELF'];
     $sec = "1";
     header("Refresh: $sec; url=$page");
+    echo $stat;
 }
 session_start();
 $_SESSION['pendingid'] = intval($findtrue['id']);
@@ -30,13 +31,6 @@ exit();
 
 <head>
     <style type="text/css">
-        iframe {
-            width: 100vw;
-            height: 100vh;
-            margin-top: 25vh;
-            margin-left: auto;
-            margin-right: auto;
-        }
         .load_page {
             margin-top: 41rem;
         }
