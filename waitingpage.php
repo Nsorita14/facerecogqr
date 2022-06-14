@@ -8,8 +8,7 @@ $id = intval($_SESSION['id']);
 $findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$id'");
 
 $stat = mysqli_fetch_assoc($findtrue)['rpi'];
-echo $stat;
-if (mysqli_fetch_assoc($findtrue)['rpi'] = false) {
+if (mysqli_fetch_assoc($findtrue)['rpi'] = 'false') {
     $page = $_SERVER['PHP_SELF'];
     $sec = "1";
     header("Refresh: $sec; url=$page");
