@@ -9,19 +9,23 @@ $findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` 
 
 $stat = mysqli_fetch_assoc($findtrue)['rpi'];
 echo $stat;
-while (!mysqli_fetch_assoc($findtrue)['rpi']) {
+if (!mysqli_fetch_assoc($findtrue)['rpi']) {
     $page = $_SERVER['PHP_SELF'];
     $sec = "1";
     header("Refresh: $sec; url=$page");
 }
-session_start();
-$_SESSION['pendingid'] = intval($findtrue['id']);
-$_SESSION['firstname'] = $findtrue['qr_firstname'];
-$_SESSION['lastname'] = $findtrue['qr_lastname'];
-$_SESSION['studentid'] = $findtrue['qr_studentid'];
-$_SESSION['course'] = $findtrue['qr_course'];
-header("Location: success.php");
-exit();
+else {
+    echo $stat;
+    session_start();
+    $_SESSION['pendingid'] = intval($findtrue['id']);
+    $_SESSION['firstname'] = $findtrue['qr_firstname'];
+    $_SESSION['lastname'] = $findtrue['qr_lastname'];
+    $_SESSION['studentid'] = $findtrue['qr_studentid'];
+    $_SESSION['course'] = $findtrue['qr_course'];
+    header("Location: success.php");
+    exit();
+}
+
 
 ?>
 
