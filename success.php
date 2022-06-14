@@ -24,7 +24,6 @@ session_start();
 <style>
     .body {
         background-image: url("img/BGpicL.jpg");
-
     }
 
     .pin {
