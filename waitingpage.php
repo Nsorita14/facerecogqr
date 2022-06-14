@@ -1,3 +1,4 @@
+
 <?php
 include 'config.php';
 session_start();
@@ -6,7 +7,7 @@ error_reporting(0);
 $id = intval($_SESSION['id']);
 $findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$id'");
 
-/*
+
 if (mysqli_fetch_assoc($findtrue)['rpi']) {
     mysqli_fetch_assoc($findtrue);
     session_start();
@@ -22,13 +23,14 @@ if (mysqli_fetch_assoc($findtrue)['rpi']) {
     $sec = "1";
     header("Refresh: $sec; url=$page");
 }
-*/
+
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
+
     <style type="text/css">
         iframe {
             width: 100vw;
@@ -36,39 +38,38 @@ if (mysqli_fetch_assoc($findtrue)['rpi']) {
             margin-top: 25vh;
             margin-left: auto;
             margin-right: auto;
+
         }
 
         .load_page {
+
+
+
             margin-top: 41rem;
         }
 
         h1 {
+
             font-family: 'Monserat';
             font-size: 50px;
         }
     </style>
+
+
 </head>
 
-
-
 <body>
-    <?php
-    if (!mysqli_fetch_assoc($findtrue)['rpi']) { ?>
+
     <div class="load_page">
         <center>
 
             <h1> Kindly wait for the approval. </h1>
             <img src="img/loading.gif" width="" height="">
         </center>
-    </div>
-    <?php }
-    $page = $_SERVER['PHP_SELF'];
-    $sec = "1";
-    header("Refresh: $sec; url=$page");?>
 
+    </div>
 </body>
 
 </html>
-
 
 
