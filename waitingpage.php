@@ -9,7 +9,7 @@ $findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` 
 
 $stat = mysqli_fetch_assoc($findtrue)['rpi'];
 echo $stat;
-while (mysqli_fetch_assoc($findtrue)['rpi'] = false) {
+while (!mysqli_fetch_assoc($findtrue)['rpi']) {
     $page = $_SERVER['PHP_SELF'];
     $sec = "1";
     header("Refresh: $sec; url=$page");
