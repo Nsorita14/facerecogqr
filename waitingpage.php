@@ -6,7 +6,7 @@ error_reporting(0);
 $id = intval($_SESSION['id']);
 $findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$id'");
 
-
+/*
 if (mysqli_fetch_assoc($findtrue)['rpi']) {
     mysqli_fetch_assoc($findtrue);
     session_start();
@@ -22,7 +22,7 @@ if (mysqli_fetch_assoc($findtrue)['rpi']) {
     $sec = "1";
     header("Refresh: $sec; url=$page");
 }
-
+*/
 ?>
 
 <!DOCTYPE html>
