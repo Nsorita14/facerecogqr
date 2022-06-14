@@ -1,29 +1,4 @@
-<?php
-include 'config.php';
-session_start();
-error_reporting(0);
 
-$id = intval($_SESSION['id']);
-$findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$id'");
-
-
-if (mysqli_fetch_assoc($findtrue)['rpi']) {
-    mysqli_fetch_assoc($findtrue);
-    session_start();
-    $_SESSION['pendingid'] = intval($findtrue['id']);
-    $_SESSION['firstname'] = $findtrue['qr_firstname'];
-    $_SESSION['lastname'] = $findtrue['qr_lastname'];
-    $_SESSION['studentid'] = $findtrue['qr_studentid'];
-    $_SESSION['course'] = $findtrue['qr_course'];
-    header("Location: success.php");
-    exit();
-} else {
-    $page = $_SERVER['PHP_SELF'];
-    $sec = "1";
-    header("Refresh: $sec; url=$page");
-}
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -70,3 +45,32 @@ if (mysqli_fetch_assoc($findtrue)['rpi']) {
 </body>
 
 </html>
+
+
+
+<?php
+include 'config.php';
+session_start();
+error_reporting(0);
+
+$id = intval($_SESSION['id']);
+$findtrue = mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$id'");
+
+
+if (mysqli_fetch_assoc($findtrue)['rpi']) {
+    mysqli_fetch_assoc($findtrue);
+    session_start();
+    $_SESSION['pendingid'] = intval($findtrue['id']);
+    $_SESSION['firstname'] = $findtrue['qr_firstname'];
+    $_SESSION['lastname'] = $findtrue['qr_lastname'];
+    $_SESSION['studentid'] = $findtrue['qr_studentid'];
+    $_SESSION['course'] = $findtrue['qr_course'];
+    header("Location: success.php");
+    exit();
+} else {
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "1";
+    header("Refresh: $sec; url=$page");
+}
+
+?>
