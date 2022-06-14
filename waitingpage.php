@@ -1,53 +1,3 @@
-
-
-<!DOCTYPE html>
-<html>
-
-<head>
-
-    <style type="text/css">
-        iframe {
-            width: 100vw;
-            height: 100vh;
-            margin-top: 25vh;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
-        .load_page {
-
-
-
-            margin-top: 41rem;
-        }
-
-        h1 {
-
-            font-family: 'Monserat';
-            font-size: 50px;
-        }
-    </style>
-
-
-</head>
-
-<body>
-
-    <div class="load_page">
-        <center>
-
-            <h1> Kindly wait for the approval. </h1>
-            <img src="img/loading.gif" width="" height="">
-        </center>
-
-    </div>
-</body>
-
-</html>
-
-
-
 <?php
 include 'config.php';
 session_start();
@@ -74,3 +24,51 @@ if (mysqli_fetch_assoc($findtrue)['rpi']) {
 }
 
 ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            margin-top: 25vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .load_page {
+            margin-top: 41rem;
+        }
+
+        h1 {
+            font-family: 'Monserat';
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <?php
+    if (!mysqli_fetch_assoc($findtrue)['rpi']) { ?>
+    <div class="load_page">
+        <center>
+
+            <h1> Kindly wait for the approval. </h1>
+            <img src="img/loading.gif" width="" height="">
+        </center>
+    </div>
+    <?php }
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "1";
+    header("Refresh: $sec; url=$page");?>
+
+</body>
+
+</html>
+
+
+
