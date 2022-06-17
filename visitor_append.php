@@ -28,7 +28,7 @@ $rs = mysqli_query($conn, $register);
 
 if ($rs) {
         $_SESSION['id'] = $id;
-        header('location: pending_waitlist.php');
+        header('location: waitingpage.php');
 } else {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('QR Registration failed. Please try again later.');

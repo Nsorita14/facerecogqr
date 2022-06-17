@@ -1,16 +1,27 @@
 <?php
+session_start();
 include 'config.php';
-
 error_reporting(0);
-
+$selected_id = $_SESSION['id'];
+$from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$selected_id'"));
+if ($from['approve'] == 'true') {
+    $_SESSION['name'] = $from['qr_firstname']." ".$from['qr_lastname'];
+    $_SESSION['qr_pin'] = $from['qr_pin'];
+    echo ("<script LANGUAGE='JavaScript'>
+    window.alert('QR Registration approved.');
+    window.location.href='success.php';
+    </script>");
+}
 ?>
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <style type="text/css">
         .load_page {
-            margin-top: 41rem;
+            margin-top: 25vh;
         }
 
         h1 {

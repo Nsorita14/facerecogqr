@@ -1,6 +1,8 @@
 <?php
 include 'config.php';
 session_start();
+$selected_id = $_SESSION['id'];
+$from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$selected_id'"));
 
 ?>
 
@@ -29,19 +31,19 @@ session_start();
     .pin {
         border: 2px solid green;
         border-radius: 15px;
-        font-size: 60px;
+        font-size: 3vh;
         height: 50px;
         width: 200px;
         padding: 10px;
     }
 
     h2 {
-        font-size: 50px;
+        font-size: 2vh;
     }
 
     h3 {
-        font-size: 50px;
-        color: green;
+        font-size: 3vh;
+        color: black;
     }
 </style>
 
@@ -57,7 +59,7 @@ session_start();
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
                 <?php } ?>
-                <img src="img/logo.png" width="270px" height="270px"> </img>
+                <img src="img/logo.png" width="200px" height="200px"> </img>
 
 
                 <?php if (isset($_GET['error'])) { ?>
@@ -68,41 +70,19 @@ session_start();
 
                     <?php
 
-                    if (isset($_SESSION['pendingid'])) {
-                    ?>
-                        <div class="w3-panel w3-cyan w3-text-white">
-                            <h2> Hi, <?php echo $_SESSION['firstname']; ?>!</h2>
-                            <h3> You have been accepted. Please position yourself in front of the turnstile for face capturing</h3>
-                            <h2> Here is your PIN: </h2>
-                            <div class="pin"><?php echo $_SESSION['visit_pin']; ?></div>
-                            <h2> Please have a copy for your EXIT CODE. </h2>
-                        </div>
-
-
-                    <?php
-                        unset($_SESSION['visit_name']);
-                        unset($_SESSION['visit_pin']);
-                        unset($_SESSION['visit_status']);
-                    }
-
-                    ?>
-
-                    <?php
-
-                    if (isset($_SESSION['user_status'])) {
+                    if (isset($_SESSION['id'])) {
                     ?>
                         <div class="w3-panel w3-blue w3-text-white">
-                            <h2> Hi, <?php echo $_SESSION['ru_name']; ?>!</h2>
-                            <h3> You have <?php echo $_SESSION['user_status']; ?> </h3>
-                            <h3> Here is your PIN: <?php echo $_SESSION['ru_pin']; ?> </h3>
-                            <h4> Please have a copy for your EXIT CODE. </h4>
-
+                            <h2> Hi, <?php echo $_SESSION['name']; ?>!</h2>
+                            <h3> You have been accepted. Here is your PIN: </h3>
+                            <h3><?php echo $_SESSION['qr_pin']; ?> </h3>
+                            <h2> Please have a copy for your EXIT CODE. Please position yourself in front of the turnstile for face capturing and press done.</h4>
+                            <button onclick="document.location='turnstile.php'">Done</button>
                         </div>
 
                     <?php
                         unset($_SESSION['ru_name']);
                         unset($_SESSION['ru_pin']);
-                        unset($_SESSION['user_status']);
                     }
 
                     ?>
