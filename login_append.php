@@ -28,6 +28,7 @@ $rs = mysqli_query($conn, $register);
 if ($rs) {
         session_start();
         $_SESSION['pin'] = $qr_pin;
+        $_SESSION['status'] = 'school';
         header('location: waitingpage.php');
 } else {
         echo ("<script LANGUAGE='JavaScript'>

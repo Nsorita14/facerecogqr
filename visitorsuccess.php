@@ -54,7 +54,6 @@ session_start();
                 <h1 class=" bg-info text-white">WELCOME TO STI COLLEGE CUBAO!</h1>
 
                 <img src="img/logo.png" width="200" height="200">
-
                 <h3 class="text-dark">
 
                     <?php
