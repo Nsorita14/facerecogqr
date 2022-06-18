@@ -1,9 +1,18 @@
 <?php
 include 'config.php';
 session_start();
-$selected_id = $_SESSION['id'];
-$from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$selected_id'"));
-
+$selected_id = $_SESSION['pin'];
+$from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_logs-users` WHERE `qr_pin` = '$selected_id'"));
+if ($from){
+    $name = $from['qr_firstname']." ".$from['qr_lastname'];
+    $course = $from['qr_course'];
+}
+else {
+    echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Thank you, good bye.');
+    window.open('https://www.google.com');
+    </script>");
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +31,7 @@ $from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users`
         <script src="js/popper.min.js"></script>
         <link rel="icon" href="img/logo.png">
         <script src="js/bootstrap.bundle.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=0.75 user-scalable=no" />
 </head>
 <style>
     .body {
@@ -38,11 +48,11 @@ $from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users`
     }
 
     h2 {
-        font-size: 23px;
+        font-size: 2vh;
     }
 
     h3 {
-        font-size: 36px;
+        font-size: 1.5vh;
         color: black;
     }
 </style>
@@ -53,41 +63,28 @@ $from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users`
         <div class="container" id="container">
             <div class="form container submit-container">
 
-                <h1 class=" bg-info text-white">WELCOME TO STI COLLEGE CUBAO!</h1>
-
-
-                <?php if (isset($_GET['error'])) { ?>
-                    <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
-                <?php } ?>
-
-
-
-                <?php if (isset($_GET['error'])) { ?>
-                    <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
-                <?php } ?>
-
+                <h1 class=" bg-info text-white">STI COLLEGE CUBAO</h1>
 
 
                 <h3 class="text-dark">
-                    <br> <br>
+ 
                     <img src="img/logo.png" width="200px" height="200px"> </img>
                     <?php
 
-                    if (isset($_SESSION['qr_firstname'])) {
+                    if (isset($_SESSION['pin'])) {
                     ?>
                         <div class="w3-panel w3-blue w3-text-white">
-                            <h3> Hi,<?php echo $_SESSION['name'];
-                                    ?>Mary! </h3>
+                            <h3> Hi,<?php echo $name; ?>. </h3>
                             <h4>Thank you for visiting <br> STI College Cubao!</h4>
 
                             <h3>You have successfully exit.</h3>
                             <h3>You may proceed to the guard.
-                                <br>
-                                <br>Please show this message and <br>claim your valid ID.
+                                <br>Please show this message and
+                                <br>claim your valid ID.
                             </h3>
 
                         <?php
-                        unset($_SESSION['qr_firstname']);
+                        unset($_SESSION['pin']);
                     }
 
                         ?>
