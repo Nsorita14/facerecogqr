@@ -7,6 +7,7 @@ $from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users`
 if ($from['approve'] == 'true') {
     $_SESSION['name'] = $from['qr_firstname']." ".$from['qr_lastname'];
     $_SESSION['qr_pin'] = $from['qr_pin'];
+    $_SESSION['qr_course'] = $from['qr_course'];
     echo ("<script LANGUAGE='JavaScript'>
     window.alert('QR Registration approved.');
     window.location.href='success.php';
