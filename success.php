@@ -76,8 +76,7 @@ $from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users`
                             <h2> Hi, <?php echo $_SESSION['name']; ?>!</h2>
                             <h3> You have been accepted. Here is your PIN: </h3>
                             <h3><?php echo $_SESSION['qr_pin']; ?> </h3>
-                            <h2> Please have a copy for your EXIT CODE. Please position yourself in front of the turnstile for face capturing and press done.</h4>
-                            <button onclick="document.location='turnstile.php'">Done</button>
+                            <h2> Please have a copy for your EXIT CODE. Show this to the guard to enter.</h4>
                         </div>
 
                     <?php

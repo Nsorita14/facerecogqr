@@ -12,22 +12,22 @@ $qr_pin =  substr(md5(rand()), 0, 5);
 
 
 #Count the rows in the rgstrd_users and increment it by one
-$count_id = mysqli_query($conn, "SELECT COUNT(*) FROM `qr_pending-users`");
-$count_array = mysqli_fetch_array($count_id);
-$id = $count_array[1];
+#$count_id = mysqli_query($conn, "SELECT COUNT(*) FROM `qr_pending-users`");
+#$count_array = mysqli_fetch_array($count_id);
+#$id = $count_array[1];
 
 
 
 #Replace to insert a data to dropped indexes
-$register = "REPLACE INTO `qr_pending-users` (`count`, qr_firstname, qr_lastname, qr_studentid, qr_course, qr_pin) 
-                     VALUES ('$id', '$qr_firstname','$qr_lastname', '$qr_studentid', '$qr_course', '$qr_pin')";
+$register = "INSERT INTO `qr_pending-users` (qr_firstname, qr_lastname, qr_studentid, qr_course, qr_pin) 
+                     VALUES ('$qr_firstname','$qr_lastname', '$qr_studentid', '$qr_course', '$qr_pin')";
 $rs = mysqli_query($conn, $register);
 
 
 
 if ($rs) {
         session_start();
-        $_SESSION['id'] = $id;
+        $_SESSION['pin'] = $qr_pin;
         header('location: waitingpage.php');
 } else {
         echo ("<script LANGUAGE='JavaScript'>

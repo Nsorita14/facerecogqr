@@ -2,9 +2,9 @@
 session_start();
 include 'config.php';
 error_reporting(0);
-$selected_id = $_SESSION['id'];
-$from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users` WHERE `count` = '$selected_id'"));
-if ($from['approve'] == 'true') {
+$selected_user = $_SESSION['pin'];
+$from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_logs-users` WHERE `qr_pin` = '$selected_user'"));
+if ($from) {
     $_SESSION['name'] = $from['qr_firstname']." ".$from['qr_lastname'];
     $_SESSION['qr_pin'] = $from['qr_pin'];
     $_SESSION['qr_course'] = $from['qr_course'];
