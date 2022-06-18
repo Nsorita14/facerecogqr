@@ -22,92 +22,93 @@ session_start();
 
 
 <center>
-<body class="body">
-    <div class="fade-in-image">
-        <div class="container" id="container">
-            <div class="form-container submit-container">
 
-                <h1 class=" bg-info text-white">Visitor Login</h1>
+    <body class="body">
+        <div class="fade-in-image">
+            <div class="container" id="container">
+                <div class="form-container submit-container">
 
-
-                <form action="visitor_append.php" method="post">
+                    <h1 class=" bg-info text-white">Visitor Login</h1>
 
 
-                    <?php if (isset($_GET['error'])) { ?>
-                        <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
-                    <?php } ?>
-                    <img src="img/logo.png" width="150px" height="150px"> </img>
-                    <span>Make sure all the information are correct.</span>
+                    <form action="visitor_append.php" method="post">
 
 
-
-
-                    <?php if (isset($_GET['error'])) { ?>
-                        <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
-                    <?php } ?>
-
-                    <H5>Please enter the following details:</h5>
+                        <?php if (isset($_GET['error'])) { ?>
+                            <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+                        <img src="img/logo.png" width="150px" height="150px"> </img>
+                        <span>Make sure all the information are correct.</span>
 
 
 
-                    <input type="name" name="qr_firstname" value="<?php
-                                                                    if (empty($_GET['qr_firstname'])) {
-                                                                        echo "";
-                                                                    } else {
-                                                                        echo $_GET['qr_firstname'];
-                                                                    } ?>" placeholder="First Name">
+
+                        <?php if (isset($_GET['error'])) { ?>
+                            <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+
+                        <H5>Please enter the following details:</h5>
 
 
-                    <input type="name" name="qr_lastname" value="<?php
-                                                                    if (empty($_GET['qr_lastname'])) {
-                                                                        echo "";
-                                                                    } else {
-                                                                        echo $_GET['qr_lastname'];
-                                                                    } ?>" placeholder="Last Name">
 
-                    <input type="studentid" name="  qr_number" value="<?php
-                                                                        if (empty($_GET['qr_number'])) {
+                        <input type="name" name="qr_firstname" value="<?php
+                                                                        if (empty($_GET['qr_firstname'])) {
                                                                             echo "";
                                                                         } else {
-                                                                            echo $_GET['qr_number'];
-                                                                        } ?>" placeholder="Mobile Number">
+                                                                            echo $_GET['qr_firstname'];
+                                                                        } ?>" placeholder="First Name">
 
 
-                    <select class="select" name="qr_gender" value="<?php
-                                                                    if (empty($_GET['qr_gender'])) {
-                                                                        echo "";
-                                                                    } else {
-                                                                        echo $_GET['qr_gender'];
-                                                                    } ?>" placeholder="Gender">
-                        <option disabled selected value>Gender</option>
-                        <option value="female">Female</option>
-                        <option value="male">Male</option>
-                    </select>
+                        <input type="name" name="qr_lastname" value="<?php
+                                                                        if (empty($_GET['qr_lastname'])) {
+                                                                            echo "";
+                                                                        } else {
+                                                                            echo $_GET['qr_lastname'];
+                                                                        } ?>" placeholder="Last Name">
+
+                        <input type="studentid" name="  qr_number" value="<?php
+                                                                            if (empty($_GET['qr_number'])) {
+                                                                                echo "";
+                                                                            } else {
+                                                                                echo $_GET['qr_number'];
+                                                                            } ?>" placeholder="Mobile Number">
 
 
-                    <select class="select" name="qr_purpose" value="<?php
-                                                                    if (empty($_GET['ru_course'])) {
-                                                                        echo "";
-                                                                    } else {
-                                                                        echo $_GET['ru_course'];
-                                                                    } ?>" placeholder="Purpose">
-                        <option disabled selected value>Purpose of visiting:</option>
-                        <option value="Enrollment">Enrollment</option>
-                        <option value="Payment">Payment</option>
-                        <option value="Guidance">Guidance</option>
-                        <option value="Meeting">Meeting</option>
-                        <option value="Appointment">Appointment</option>
-                        <option value="Clearance">Clearance</option>
-                    </select>
+                        <select class="select" name="qr_gender" value="<?php
+                                                                        if (empty($_GET['qr_gender'])) {
+                                                                            echo "";
+                                                                        } else {
+                                                                            echo $_GET['qr_gender'];
+                                                                        } ?>" placeholder="Gender">
+                            <option disabled selected value>Gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
 
 
-                    <button>SUBMIT</button>
-                    <p>Are you a Registered User? <a href="loginuser.php">Log in</a></p>
-                    </td>
-                    </tr>
+                        <select class="select" name="qr_purpose" value="<?php
+                                                                        if (empty($_GET['ru_course'])) {
+                                                                            echo "";
+                                                                        } else {
+                                                                            echo $_GET['ru_course'];
+                                                                        } ?>" placeholder="Purpose">
+                            <option disabled selected value>Purpose of visiting:</option>
+                            <option value="Enrollment">Enrollment</option>
+                            <option value="Payment">Payment</option>
+                            <option value="Guidance">Guidance</option>
+                            <option value="Meeting">Meeting</option>
+                            <option value="Appointment">Appointment</option>
+                            <option value="Clearance">Clearance</option>
+                        </select>
 
-                </form>
-                </center>
+
+                        <button>SUBMIT</button>
+                        <p><a href="index.php">Return to Home Page.</a></p>
+                        </td>
+                        </tr>
+
+                    </form>
+</center>
 
 </body>
 

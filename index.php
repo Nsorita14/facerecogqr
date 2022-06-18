@@ -29,9 +29,10 @@
 					<br>
 					<h2>Please select, if you are a: </h2>
 
-
+					<br> <br> <br>
 
 					<a href="loginuser.php"><button type="button">Student</button></a><br>
+					<a href="employee.php"><button type="button">Employee</button></a><br>
 					<a href="visitorpage.php"><button type="button">Visitor</button></a>
 					<br>
 					<br>

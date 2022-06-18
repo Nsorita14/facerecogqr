@@ -55,37 +55,22 @@ session_start();
                                                                                 echo "";
                                                                             } else {
                                                                                 echo $_GET['qr_studentid'];
-                                                                            } ?>" placeholder="Student ID number">
+                                                                            } ?>" placeholder="Employee ID no.">
 
 
-                        <label> Select if: </label>
-                        <select name="ru_course" id="select" value=" <?php
-                                                                        if (empty($_GET['ru_course'])) {
+                        <select class="select" name="qr_course" value="<?php
+                                                                        if (empty($_GET['qr_course'])) {
                                                                             echo "";
                                                                         } else {
-                                                                            echo $_GET['ru_course'];
-                                                                        } ?>" placeholder="Program/Strand">
-
-
-
-                            <option disabled selected value>Program/Strand</option>
-
-                            <optgroup label="Tertiary">
-                                <option value="BSA">BSA</option>
-                                <option value="BSBA">BSBA</option>
-                                <option value="BSCPE">BSCPE</option>
-                                <option value="BSCS">BSCS</option>
-                                <option value="BSIT">BSIT</option>
-                                <option value="BMMA">BMMA</option>
-                                <option value="BSHM">BSHM</option>
-                                <option value="BSTM">BSTM</option>
-                            </optgroup>
-
-                            <optgroup label="Senior High School">
-                                <option value="GAS">GAS</option>
-                                <option value="HUMSS">HUMSS</option>
-                                <option value="TOP">TOP</option>
-                                <option value="STEM">STEM</option>
+                                                                            echo $_GET['qr_course'];
+                                                                        } ?>" placeholder="Position">
+                            <option disabled selected value>Position</option>
+                            <optgroup label="Employee">
+                                <option value="FTFACULTY">Full-time Faculty Staff</option>
+                                <option value="PTFACULTY">Part-time Faculty Staff</option>
+                                <option value="NTP">Non Teaching Personnel</option>
+                                <option value="RD">Registration Department</option>
+                                <option value="AD">Administration Department</option>
                             </optgroup>
                         </select>
 
