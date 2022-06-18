@@ -38,11 +38,11 @@ $from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users`
     }
 
     h2 {
-        font-size: 2vh;
+        font-size: 23px;
     }
 
     h3 {
-        font-size: 3vh;
+        font-size: 36px;
         color: black;
     }
 </style>
@@ -59,24 +59,32 @@ $from = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `qr_pending-users`
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
                 <?php } ?>
-                <img src="img/logo.png" width="200px" height="200px"> </img>
+
 
 
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="regerror-msg"><?php echo $_GET['error']; ?></p>
                 <?php } ?>
 
-                <h3 class="text-dark">
 
+
+                <h3 class="text-dark">
+                    <br> <br>
+                    <img src="img/logo.png" width="200px" height="200px"> </img>
                     <?php
 
                     if (isset($_SESSION['qr_firstname'])) {
                     ?>
                         <div class="w3-panel w3-blue w3-text-white">
-                            <h3>Thank you for visiting STI College Cubao!</h3>
-                            <h2> Hi,<?php echo $_SESSION['name']; ?>!</h2>
+                            <h3> Hi,<?php echo $_SESSION['name'];
+                                    ?>Mary! </h3>
+                            <h4>Thank you for visiting <br> STI College Cubao!</h4>
+
                             <h3>You have successfully exit.</h3>
-                            <h3>You may proceed to the guard, show this message and claim your valid ID. </h3>
+                            <h3>You may proceed to the guard.
+                                <br>
+                                <br>Please show this message and <br>claim your valid ID.
+                            </h3>
 
                         <?php
                         unset($_SESSION['qr_firstname']);
