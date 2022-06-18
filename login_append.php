@@ -14,7 +14,7 @@ $qr_pin =  substr(md5(rand()), 0, 5);
 #Count the rows in the rgstrd_users and increment it by one
 $count_id = mysqli_query($conn, "SELECT COUNT(*) FROM `qr_pending-users`");
 $count_array = mysqli_fetch_array($count_id);
-$id = $count_array[0];
+$id = $count_array[1];
 
 
 

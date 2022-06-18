@@ -11,7 +11,7 @@ session_start();
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/design.css">
     <link rel="icon" href="img/logo.png">
-    <title>User Form</title>
+    <title>Student Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.75 user-scalable=no" />
 </head>
 
@@ -21,7 +21,7 @@ session_start();
         <div class="fade-in-image">
             <div class="container" id="container">
                 <div class="form-container submit-container">
-                    <h1>User Login</h1>
+                    <h1>Student Login</h1>
                     <form action="login_append.php" method="post">
                         <img src="img/logo.png" width="150px" height="150px">
                         <span>Make sure all the information are correct.</span>
@@ -59,11 +59,11 @@ session_start();
 
 
                         <label> Select if: </label>
-                        <select name="ru_course" id="select" value=" <?php
-                                                                        if (empty($_GET['ru_course'])) {
+                        <select name="qr_course" id="select" value=" <?php
+                                                                        if (empty($_GET['qr_course'])) {
                                                                             echo "";
                                                                         } else {
-                                                                            echo $_GET['ru_course'];
+                                                                            echo $_GET['qr_course'];
                                                                         } ?>" placeholder="Program/Strand">
 
 
